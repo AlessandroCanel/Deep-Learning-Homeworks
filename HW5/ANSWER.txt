@@ -1,0 +1,124 @@
+**ANSWER**:
+First try
+ENC_LAYERS = [512, 256, 128, 64, 32]
+DEC_LAYERS = [64, 128, 256, 512]
+ACT_FUN = 'leaky_relu'
+Test Loss: 0.02147425
+bad, blobby mess and unstable learning curve
+
+ENC_LAYERS = [512, 256, 128]
+DEC_LAYERS = [128, 256, 512]
+ACT_FUN = 'leaky_relu'
+more defined but soft
+Test Loss: 0.01409393
+
+ENC_LAYERS = [256, 128, 64]
+DEC_LAYERS = [54, 128, 256]
+ACT_FUN = 'leaky_relu'
+ACT_FUN = 'leaky_relu'
+more defined but soft
+Test Loss: 0.01909393
+
+Test Loss: 0.01747170
+IN_DIM = x_train.shape[-1]
+ENC_LAYERS = [512, 64]
+DEC_LAYERS = [64, 128, 512]
+ACT_FUN = 'leaky_relu'
+lr = 0.005
+epochs = 50
+just spots
+
+IN_DIM = x_train.shape[-1]
+ENC_LAYERS = [512, 64, 32]
+DEC_LAYERS = [32,128]
+ACT_FUN = 'leaky_relu'
+Does NOT retain info at all
+
+IN_DIM = x_train.shape[-1]
+ENC_LAYERS = [1024, 512, 256]
+DEC_LAYERS = [256 , 512]
+ACT_FUN = 'leaky_relu'
+lr = 0.005
+epochs = 50
+not able to improve at all
+
+IN_DIM = x_train.shape[-1]
+ENC_LAYERS = [512, 256]
+DEC_LAYERS = [256 , 512, 1024]
+ACT_FUN = 'leaky_relu'
+lr = 0.005
+not able to improve at all
+
+IN_DIM = x_train.shape[-1]
+ENC_LAYERS = [512, 256]
+DEC_LAYERS = [64, 256 , 512]
+ACT_FUN = 'leaky_relu'
+just faint shapes
+
+IN_DIM = x_train.shape[-1]
+ENC_LAYERS = [512, 256, 128]
+DEC_LAYERS = [128, 256, 512]
+ACT_FUN = 'tanh'
+lr = 0.005
+not improving at all
+
+
+
+
+
+**ANSWER**:
+Test Loss: 0.01107205
+IN_DIM = x_train.shape[-1]
+ENC_LAYERS = [256]
+DEC_LAYERS = []
+ACT_FUN = 'leaky_relu'
+lr = 0.005
+epochs = 20
+Really good reconstruction, still fuzzy
+
+Test Loss: 0.01333211
+IN_DIM = x_train.shape[-1]
+ENC_LAYERS = [64]
+DEC_LAYERS = []
+ACT_FUN = 'leaky_relu'
+lr = 0.005
+epochs = 20
+Way too fuzzy, even with a noise level of 0.1 (control)
+
+After the sanity check 128 is the most promising, starting with a noise level of 0.3, wich is high
+IN_DIM = x_train.shape[-1]
+ENC_LAYERS = [128]
+DEC_LAYERS = []
+ACT_FUN = 'leaky_relu'
+lr = 0.005
+epochs = 20
+Despite the high level of noise and Test Loss: 0.01439785 high test loss the model clearly learned as it can be seen from the written text on the fourth image that seemengly reappears from the noise.
+
+IN_DIM = x_train.shape[-1]
+ENC_LAYERS = [32]
+DEC_LAYERS = []
+ACT_FUN = 'leaky_relu'
+lr = 0.005
+epochs = 20
+0.3 noise
+Test Loss: 0.01607581
+way too noisy, the shapes are recognizable
+
+IN_DIM = x_train.shape[-1]
+ENC_LAYERS = [1024]
+DEC_LAYERS = []
+ACT_FUN = 'leaky_relu'
+lr = 0.005
+epochs = 20
+Test Loss: 0.00991785
+Really good! Even with high noise! 0.3
+
+noise_factor = 0.7 # adjust the noise level here.
+IN_DIM = x_train.shape[-1]
+ENC_LAYERS = [1024]
+DEC_LAYERS = []
+ACT_FUN = 'leaky_relu'
+lr = 0.005
+epochs = 20
+Even with high noise shapes recognizable
+seems that many elements is good for model

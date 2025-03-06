@@ -1,0 +1,145 @@
+
+epoch: 30 -> Loss: 68862.73437500 ----- Rec Loss: 68857.34375000 ----- Effective KL Loss: 5.41290379
+Training time in second: 248.84683875500014
+
+ENC_LAYERS = [2048]# [TO COMPLETE]
+DEC_LAYERS = [2048]# [TO COMPLETE]
+act_fun = 'leaky_relu'# [TO COMPLETE]
+last_layer_act_fun = 'sigmoid' # [TO COMPLETE]
+
+epoch: 30 -> Loss: 68795.14062500 ----- Rec Loss: 68792.10937500 ----- Effective KL Loss: 3.03124475
+Training time in second: 237.76662223599942
+
+ENC_LAYERS = [2048, 1024]# [TO COMPLETE]
+DEC_LAYERS = [1024, 2048]# [TO COMPLETE]
+act_fun = 'relu'# [TO COMPLETE]
+last_layer_act_fun = 'sigmoid' # [TO COMPLETE]
+latent_dim = 2
+
+epoch: 30 -> Loss: 68608.61718750 ----- Rec Loss: 68604.57812500 ----- Effective KL Loss: 4.08999014
+Training time in second: 257.02745041599974
+
+input_dim = 784# [TO COMPLETE]
+ENC_LAYERS = [2048, 1024, 512]# [TO COMPLETE]
+DEC_LAYERS = [512, 1024, 2048]# [TO COMPLETE]
+act_fun = 'relu'# [TO COMPLETE]
+last_layer_act_fun = 'sigmoid' # [TO COMPLETE]
+latent_dim = 2
+epoch: 30 -> Loss: 69521.34375000 ----- Rec Loss: 69521.34375000 ----- Effective KL Loss: 0.00000220
+Training time in second: 277.1118444900003 kloss cala immediatamente
+
+ENC_LAYERS = [1024, 512]# [TO COMPLETE]
+DEC_LAYERS = [512, 1024]# [TO COMPLETE]
+act_fun = 'relu'# [TO COMPLETE]
+last_layer_act_fun = 'tanh' # [TO COMPLETE]
+latent_dim = 2
+epoch: 30 -> Loss: 38693.94921875 ----- Rec Loss: 38693.90625000 ----- Effective KL Loss: 0.05165704
+Training time in second: 257.95139159799965 best of the best, so well defined
+
+
+
+
+
+
+
+
+Answer :
+### TO COMPLETE
+input_dim = 784# [TO COMPLETE]
+ENC_LAYERS = [512,256]# [TO COMPLETE]
+latent_dim = 2
+DEC_LAYERS = [256,512]# [TO COMPLETE]
+act_fun = 'sigmoid'# [TO COMPLETE]
+last_layer_act_fun = 'linear'# [TO COMPLETE]
+too simple, all number clouds, redo the actiation function
+
+input_dim = 784# [TO COMPLETE]
+ENC_LAYERS = [512,256]# [TO COMPLETE]
+latent_dim = 2
+DEC_LAYERS = [256,512]# [TO COMPLETE]
+act_fun = 'relu'# [TO COMPLETE]
+last_layer_act_fun = 'tanh'# [TO COMPLETE]
+Nettamente meglio, si ab=vvicinano molto piu ad essere dei numeri, ancora indecifrabili
+
+input_dim = 784# [TO COMPLETE]
+ENC_LAYERS = [512,256]# [TO COMPLETE]
+latent_dim = 2
+DEC_LAYERS = [256,512]# [TO COMPLETE]
+act_fun = 'relu'# [TO COMPLETE]
+last_layer_act_fun = 'tanh'# [TO COMPLETE]
+Sempre piu chiari, ma sembrano tutti 9
+epoch: 30 -> Loss: 38712.33203125 ----- Rec Loss: 38712.30078125 ----- Effective KL Loss: 0.04741139
+Training time in second: 248.03716633
+
+ENC_LAYERS = [1024,512]# [TO COMPLETE]
+latent_dim = 2
+DEC_LAYERS = [512,1024]# [TO COMPLETE]
+act_fun = 'relu'# [TO COMPLETE]
+last_layer_act_fun = 'tanh'# [TO COMPLETE]
+epoch: 30 -> Loss: 38416.20703125 ----- Rec Loss: 38416.14453125 ----- Effective KL Loss: 0.06729443
+Training time in second: 246.57000502799997 very defined but still nonsense
+
+input_dim = 784# [TO COMPLETE]
+ENC_LAYERS = [1024,512]# [TO COMPLETE]
+latent_dim = 2
+DEC_LAYERS = [512,1024]# [TO COMPLETE]
+act_fun = 'tanh'# [TO COMPLETE]
+last_layer_act_fun = 'tanh'# [TO COMPLETE]
+epoch: 30 -> Loss: 38871.28906250 ----- Rec Loss: 38871.24218750 ----- Effective KL Loss: 0.03583581
+Training time in second: 251.38433188099998 kl constant, good result, sharp, more than half the numbers are recognizable
+
+input_dim = 784# [TO COMPLETE]
+ENC_LAYERS = [1024,256]# [TO COMPLETE]
+latent_dim = 2
+DEC_LAYERS = [256,1024]# [TO COMPLETE]
+act_fun = 'tanh'# [TO COMPLETE]
+last_layer_act_fun = 'tanh'# [TO COMPLETE]
+epoch: 30 -> Loss: 38938.03125000 ----- Rec Loss: 38938.00390625 ----- Effective KL Loss: 0.02590746
+Training time in second: 253.7682659899997
+More blocky, but only 3 numbers are wrong
+
+input_dim = 784# [TO COMPLETE]
+ENC_LAYERS = [1024,512,256]# [TO COMPLETE]
+latent_dim = 2
+DEC_LAYERS = [256,512,1024]# [TO COMPLETE]
+act_fun = 'tanh'# [TO COMPLETE]
+last_layer_act_fun = 'tanh'# [TO COMPLETE]
+promising but the test of zero still not clean
+epoch: 30 -> Loss: 39032.99218750 ----- Rec Loss: 39032.97656250 ----- Effective KL Loss: 0.02151363
+Training time in second: 274.13107363000006
+
+input_dim = 784# [TO COMPLETE]
+ENC_LAYERS = [1024,512,256,64]# [TO COMPLETE]
+latent_dim = 2
+DEC_LAYERS = [64,256,512,1024]# [TO COMPLETE]
+act_fun = 'tanh'# [TO COMPLETE]
+last_layer_act_fun = 'tanh'# [TO COMPLETE]
+worse, bottleneck not effective
+epoch: 30 -> Loss: 39028.65234375 ----- Rec Loss: 39028.62500000 ----- Effective KL Loss: 0.01785715
+Training time in second: 280.9431673230001
+
+input_dim = 784# [TO COMPLETE]
+ENC_LAYERS = [1024,512]# [TO COMPLETE]
+latent_dim = 2
+DEC_LAYERS = [512,1024]# [TO COMPLETE]
+act_fun = 'tanh'# [TO COMPLETE]
+last_layer_act_fun = 'linear'# [TO COMPLETE]
+epoch: 30 -> Loss: 15976.62304688 ----- Rec Loss: 15976.56933594 ----- Effective KL Loss: 0.04669534
+Training time in second: 263.386317188
+Despite the metrics being very promising, everything is a gray blob
+
+input_dim = 784# [TO COMPLETE]
+ENC_LAYERS = [1024,512]# [TO COMPLETE]
+latent_dim = 2
+DEC_LAYERS = [512,1024]# [TO COMPLETE]
+act_fun = 'sigmoid'# [TO COMPLETE]
+last_layer_act_fun = 'sigmoid'# [TO COMPLETE]
+a malapena un segno
+
+input_dim = 784# [TO COMPLETE]
+ENC_LAYERS = [1024]# [TO COMPLETE]
+latent_dim = 2
+DEC_LAYERS = [1024]# [TO COMPLETE]
+act_fun = 'tanh'# [TO COMPLETE]
+last_layer_act_fun = 'tanh'# [TO COMPLETE]
+just spots, but the numbers can be understood
